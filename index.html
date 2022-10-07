@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <title>
+    APP Car
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Icons -->
+  <link href="/assets/css/icons.css" rel="stylesheet" />  
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/css/custom-ui.css?v=1.0.6" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show  bg-gray-100 virtual-reality">
+  
+  <div class=" position-relative" style="background-image: url('/assets/img/carro.jpg') ; background-size: cover;">
+    
+    <main class="main-content -border-radius-lg">
+      <div class="section min-vh-100 position-relative transform-scale-0 ">
+        <div class="container">
+          <div class="row pt-10">
+            <div class="col-lg-1 col-md-1 pt-5 pt-lg-0 ms-lg-5 text-center">
+              <a href="javascript:;" class="avatar avatar-md border-0" data-bs-toggle="tooltip" data-bs-placement="left" title="Perfil de usuário">
+                <img class="border-radius-lg" alt="Image placeholder" src="/assets/img/team-2.jpg">
+              </a>
+              <button class="btn btn-white border-radius-lg p-2 mt-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Home">
+                <i class="fas fa-home p-2"></i>
+              </button>
+              <button class="btn btn-white border-radius-lg p-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Search">
+                <i class="fas fa-search p-2"></i>
+              </button>
+              <button class="btn btn-white border-radius-lg p-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Minimize">
+                <i class="fas fa-ellipsis-h p-2"></i>
+              </button>
+            </div>
+            <div class="col-lg-8 col-md-11">
+              <div class="d-flex">
+                <div class="me-auto">
+                  <h1 class="display-1 font-weight-bold mt-n4 mb-0" id="hour"></h1>
+                  <h6 class="text-uppercase mb-0 ms-1">Barueri - SP</h6>
+                </div>
+                <div class="ms-auto">
+                  <img class="w-50 float-end mt-lg-n4" src="/assets/img/small-logos/icon-sun-cloud.png" alt="image sun">
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-lg-4 col-md-4">
+                  <div class="card move-on-hover overflow-hidden">
+                    <div class="card-body">
+                      <div class="text-center">                        
+                        <h6 class="mb-0">
+                          Acender luzes                        
+                        </h6>
+                      </div>
+                      <hr class="horizontal dark">
+                      <div class="text-center">
+                        
+                        <h6 class="mb-0">
+                          Abrir garagem
+                        </h6>
+                      </div>
+                      <hr class="horizontal dark">
+                      <div class="text-center">                        
+                        <h6 class="mb-0">
+                          Ativar aspirador de pó
+                        </h6>
+                      </div>
+                      <div class="text-center">  
+                        <hr class="horizontal dark">
+                        <a href="javascript:;" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
+                          Ativar câmeras
+                        </a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mt-4 mt-sm-0">
+                  <div class="card bg-gradient-dark move-on-hover"  id="textGate">
+                    <div class="card-body">
+                      <div class="">
+                        <h5 class="text-white text-center">
+                          <span class="openGate" >Abrir</span>
+                          <span class="closeGate " >Fechar</span>
+                          Portão
+                        </h5>                        
+                      </div>
+                      <div class="text-center">
+                        <a href="#" class="" onclick="gate()">
+                          <i class="fas iconGate iconGateOpen text-white" id="iconGate"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- <a href="javascript:;" class="w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
+                      <i class="fas fa-chevron-down text-white"></i>
+                    </a> -->
+                  </div>
+                  <div class="card bg-danger text-white move-on-hover mt-4">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <p class="mb-0">PERIGO</p>
+                        <a href="javascript:;" class="ms-auto text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="Check your emails">
+                          <!-- Check -->
+                          <i class="fas fa-exclamation-triangle"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mt-4 mt-sm-0">
+                  <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
+                    <div class="cursor-pointer">
+                      <div class="full-background" style="background-image: url('/assets/img/carroapp.jpg')"></div>
+                      <div class="card-body">
+                        <h5 class="text-white mb-0">Visualizar</h5>
+                        <p class="text-white text-sm">Câmeras</p>
+                        <div class="d-flex mt-5">
+                          <button class="btn btn-outline-white rounded-circle p-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Prev">
+                            <i class="fas fa-backward p-2"></i>
+                          </button>
+                          <button class="btn btn-outline-white rounded-circle p-2 mx-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Pause">
+                            <i class="fas fa-play p-2"></i>
+                          </button>
+                          <button class="btn btn-outline-white rounded-circle p-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Next">
+                            <i class="fas fa-forward p-2"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card move-on-hover mt-4">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <p class="my-auto">Mensagens</p>
+                        <div class="ms-auto">
+                          <div class="avatar-group">
+                            <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="2 New Messages">
+                              <img alt="Image placeholder" src="/assets/img/team-1.jpg">
+                            </a>
+                            <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="1 New Message">
+                              <img alt="Image placeholder" src="/assets/img/team-2.jpg">
+                            </a>
+                            <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="13 New Messages">
+                              <img alt="Image placeholder" src="/assets/img/team-3.jpg">
+                            </a>
+                            <!-- <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="7 New Messages">
+                              <img alt="Image placeholder" src="/assets/img/team-4.jpg">
+                            </a> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+ 
+  <script>
+    function setHour(i) {
+      if (i < 10) {i = "0" + i}
+        return i;
+    }
+
+    const d = new Date();
+    let h = setHour(d.getHours());
+    let m = setHour(d.getMinutes());
+    let s = setHour(d.getSeconds());
+    let time = h + ":" + m + ":" + s;
+    document.getElementById("hour").innerHTML = time;
+  </script>
+
+
+  <!--   Core JS Files   -->
+  <script src="/assets/js/core/popper.min.js"></script>
+  <script src="/assets/js/core/bootstrap.min.js"></script>
+  <script src="/assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="/assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/assets/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
