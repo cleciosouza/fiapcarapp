@@ -4,8 +4,3 @@ function gate() {
     var textGate = document.getElementById("textGate");
     textGate.classList.toggle("closed");
   }
-
-//   function myFunction() {
-//     var element = document.getElementById("myDIV");
-//     element.classList.toggle("mystyle");
-//  }
